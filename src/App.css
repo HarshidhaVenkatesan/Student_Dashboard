@@ -1,0 +1,187 @@
+.sidebar-container {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.sidebar {
+  height: 100vmax;
+  width: 400px;
+  background-color: #2f4050;
+}
+.sidebar-list {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+.sidebar-list .sidebar-row {
+  width: 100%;
+  height: 50px;
+  background-color: #2f4050;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 17px;
+}
+.sidebar-row #sidebar-icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+.sidebar-row #sidebar-title {
+  flex: 70%;
+  font-size: 25px;
+}
+.sidebar-row:hover {
+  padding: 5px 0px;
+  background-color: #293846;
+}
+.sidebar-list #active {
+  background-color: #293846;
+}
+.sidebar-profile {
+  background-color: #293846;
+  padding: 10px;
+}
+.Sidebar-data {
+  width: 100%;
+  height: 30px;
+  padding: 10px 15px 0px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+}
+.Sidebar-head {
+  width: 100%;
+  height: 15px;
+  padding: 15px 15px 0px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  color: #6b8aa3;
+}
+.heading {
+  color: #6b8aa3;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.overall-container {
+  display: flex;
+  flex-direction: row;
+}
+.GPA-chart {
+  width: 1000px;
+  height: auto;
+  border: none;
+  background-color: #2e2e2e;
+  border-radius: 20px;
+  padding: 20px 10px;
+  margin: 10px 20px;
+  margin-bottom: 50px;
+  transition: 0.4s ease;
+}
+.GPA-chart:hover {
+  transform: scale(1.1);
+}
+.course-chart {
+  width: 1000px;
+  height: auto;
+  border: none;
+  background-color: #2e2e2e;
+  border-radius: 20px;
+  padding: 20px 10px;
+  margin: 10px 20px;
+  margin-bottom: 50px;
+  transition: 0.4s ease;
+}
+.course-chart:hover {
+  transform: scale(1.1);
+}
+.profile-cont {
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 80px;
+  width: 200px;
+}
+.stats-cont {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+.prof-cont {
+  margin-left: 100px;
+}
+.Donut-chart,
+.CGPA-cont {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background-color: #2e2e2e;
+  border-radius: 20px;
+  padding: 20px 10px;
+  margin: 10px 20px;
+  width: fit-content;
+  overflow-x: auto;
+  transition: 0.4s ease;
+}
+.Donut-chart:hover,
+.CGPA-cont:hover {
+  transform: scale(1.1);
+}
+.Donut-container {
+  display: flex;
+  flex-direction: row;
+}
+.info-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.info {
+  transition: 0.4s ease;
+}
+.info:hover {
+  transform: scale(1.1);
+}
+.data-container {
+  background-color: #3e3e3e;
+  color: black;
+  padding: 30px 80px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  width: fit-content;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+}
+.data-container:hover {
+  background-color: #000000;
+}
+
+.data-title {
+  color: #bebebe;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+.data-data {
+  color: #ffffff;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+}
