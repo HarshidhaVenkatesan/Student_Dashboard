@@ -17,8 +17,7 @@ function Sidebar(props) {
             <li
               key={key}
               className="sidebar-row"
-              id={window.location.pathname == val.Link ? "active" : ""}
-              onClick={() => props.handleItemClick(val)}
+              onClick={() => handleItemClick(val)}
             >
               <div id="sidebar-icon">{val.icon}</div>
               <div id="sidebar-title">{val.title}</div>

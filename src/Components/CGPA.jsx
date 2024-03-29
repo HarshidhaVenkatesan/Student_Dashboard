@@ -5,12 +5,14 @@ import input from "../Data/input.json";
 function CGPA(props) {
   const regno = props.data;
 
+  //Filtering the records of the user
   const userData = input.filter((data) => {
     const inputData = data.register_number.toString().trim();
     const inputDataToMatch = regno.toString().trim();
     return inputData.toLowerCase() === inputDataToMatch.toLowerCase();
   });
-  // Initialize an object to store GPA for each semester
+
+
   const getGradePoints = (grade) => {
     switch (grade) {
       case "O":
@@ -42,108 +44,46 @@ function CGPA(props) {
   const cgpa = totalCredits !== 0 ? totalGradePoints / totalCredits : 0;
   const remaining = 10 - cgpa;
 
-  // labels: ["CGPA"],
-  // title: {
-  //   text: `CGPA of ${regno}%`,
-  //   align: "center",
-  //   margin: 20,
-  //   offsetY: -10,
-  //   style: {
-  //     fontSize: "16px",
-  //     fontWeight: "bold",
-  //     color: "#78A1FF",
-  //   },
-  // },
-  // plotOptions: {
-  //   radialBar: {
-  //     startAngle: -135,
-  //     endAngle: 135,
-  //     dataLabels: {
-  //       name: {
-  //         fontSize: "12px",
-  //         color: "#78A1FF",
-  //         offsetY: -10,
-  //       },
-  //       value: {
-  //         offsetY: 4,
-  //         fontSize: "16px",
-  //         color: "#78A1FF",
-  //         formatter: function (val) {
-  //           return val.toFixed(2);
-  //         },
-  //       },
-  //     },
-  //   },
-  // },
-  // stroke: {
-  //   lineCap: "round",
-  // },
-  // colors: ["#FFC107"]
   const chartOptions = {
-    chart: {
-      height: 280,
-      type: "radialBar",
-      scale: {
-        range: {
-          min: 0,
-          max: 10,
-        },
+    labels: ["CGPA"],
+    title: {
+      text: `CGPA of ${regno}`,
+      align: "center",
+      margin: 20,
+      offsetY: -10,
+      style: {
+        fontSize: "16px",
+        fontWeight: "bold",
+        color: "#78A1FF",
       },
     },
-    colors: ["#20E647"],
+    legend: {
+      labels: {
+        colors: "#78A1FF",
+      },
+    },
     plotOptions: {
-      radialBar: {
-        hollow: {
-          margin: 0,
-          size: "60%",
-          background: "#293846",
-        },
-        track: {
-          dropShadow: {
-            enabled: true,
-            top: 2,
-            left: 0,
-            blur: 4,
-            opacity: 0.15,
-          },
-        },
+      pie: {
+        startAngle: 0,
+        endAngle: 360,
         dataLabels: {
-          name: {
-            offsetY: -10,
-            color: "#fff",
-            fontSize: "13px",
-          },
-          value: {
-            color: "#fff",
-            fontSize: "30px",
-            show: true,
-          },
+          offset: 0,
+          minAngleToShowLabel: 10,
         },
-        max: 10,
-      },
-    },
-    fill: {
-      type: "gradient",
-      gradient: {
-        shade: "dark",
-        type: "vertical",
-        gradientToColors: ["#87D4F9"],
-        stops: [0, 100],
       },
     },
     stroke: {
-      lineCap: "round",
+      show: false,
     },
-    labels: ["CGPA"],
+    colors: ["#FFC107", "#2e2e2e"],
   };
 
-  const chartSeries = [cgpa.toFixed(2)];
+  const chartSeries = [cgpa, remaining];
 
   return (
     <div className="CGPA-cont">
-      <Chart options={chartOptions} series={chartSeries} type="radialBar" />
+      <Chart options={chartOptions} series={chartSeries} type="donut" />
     </div>
   );
 }
-
 export default CGPA;

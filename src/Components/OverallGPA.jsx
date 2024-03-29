@@ -2,8 +2,7 @@ import React from "react";
 import Chart from "react-apexcharts";
 import input from "../Data/input.json";
 
-function OverallGPA(props) {
-  const regno = props.data;
+function OverallGPA() {
   const semesterGPAs = {};
 
   const calculateGPA = (studentData) => {
@@ -41,6 +40,7 @@ function OverallGPA(props) {
 
   //Group courses by semester
   const dataBySemester = {};
+  
   input.forEach((data) => {
     if (!dataBySemester[data.semester]) {
       dataBySemester[data.semester] = [];

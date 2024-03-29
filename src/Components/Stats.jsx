@@ -7,7 +7,7 @@ function Stats(props) {
   return (
     <div className="stats-cont">
       <h2>Overall average GPA scored across each semester</h2>
-      <OverallGPA data={regno} />
+      <OverallGPA />
       <h2>Overall average grade points across each course</h2>
       <Coursewise />
     </div>

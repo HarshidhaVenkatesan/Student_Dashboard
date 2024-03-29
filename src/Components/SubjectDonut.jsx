@@ -5,6 +5,7 @@ import input from "../Data/input.json";
 function SubjectDonut(props) {
   const regno = props.data;
 
+  //Filtering the records of the user
   const userData = input.filter((data) => {
     const inputData = data.register_number.toString().trim();
     const inputDataToMatch = regno.toString().trim();

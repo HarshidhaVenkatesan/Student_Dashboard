@@ -4,6 +4,7 @@ import input from "../Data/input.json";
 import ApexCharts from "react-apexcharts";
 
 function Coursewise() {
+  
   // Function to group courses by course code
   const groupByCourse = (courses) => {
     const courseData = {};

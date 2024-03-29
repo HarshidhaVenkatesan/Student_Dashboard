@@ -11,11 +11,11 @@ function Dashboard() {
     switch (item.Link) {
       case "/profile":
         console.log(item.Link);
-        setSelectedComponent(<Profile data={regno}/>);
+        setSelectedComponent(<Profile data={regno} />);
         break;
       case "/dashboard":
         console.log(item.Link);
-        setSelectedComponent(<Stats data={regno}/>);
+        setSelectedComponent(<Stats data={regno} />);
         break;
       default:
         setSelectedComponent(null);
@@ -33,6 +33,3 @@ function Dashboard() {
   );
 }
 export default Dashboard;
-{
-  /* <p>Hii Dashboard {location.state.regno}!</p>; */
-}

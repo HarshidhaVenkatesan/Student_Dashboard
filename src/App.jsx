@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dasboard";
 import Profile from "./Pages/Profile";
@@ -9,10 +14,9 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
         <Route exact path="/login" element={<Login />} />
-
         <Route exact path="/profile" element={<Profile />} />
-
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route exact path="/sidebar" element={<Sidebar />} />
       </Routes>
